@@ -108,7 +108,7 @@ class Products(Resource):
         except Exception as e:
             return make_response(jsonify({"errors": [str(e)]}), 400)
         
-api.add_resource(Products, '/products')
+api.add_resource(Products, '/api/v1/products')
 
 class ProductsByID(Resource):
     def get(self, id):
@@ -141,7 +141,7 @@ class ProductsByID(Resource):
             return make_response(jsonify({"errors": "Product not found"}), 404)
         
     
-api.add_resource(ProductsByID, '/products/<int:id>')
+api.add_resource(ProductsByID, '/api/v1/products/<int:id>')
 
 
 class Cartitems(Resource):
