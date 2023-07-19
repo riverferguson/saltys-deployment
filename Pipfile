@@ -16,6 +16,7 @@ ipdb = "*"
 psycopg2-binary = "*"
 python-dotenv = "*"
 waitress = "*"
+gunicorn = "*"
 
 [dev-packages]
 
