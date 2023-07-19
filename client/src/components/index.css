@@ -1,14 +1,15 @@
 .nav {
-    background-color: rgb(105, 105, 113);
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: stretch;
-    gap: 2rem;
-    padding: 0 1rem;
-    position: sticky;
-    top:0;
-    height: 100px
+  background-color: gray;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 2rem;
+  padding: 0 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 99; /* Ensure the navbar is above other elements */
+  height: 90px;
 }
 
 .nav-link-wrapper {
@@ -40,6 +41,7 @@ body {
     padding: 0 1rem;
     position: sticky;
     top:0;
+    z-index: 100;
 }
 
 .shop-name {
@@ -177,4 +179,18 @@ cursor: pointer;
   color: black;
   transition-duration: 0.4s;
   border-radius: 2.5rem;
+}
+
+
+.product-page {
+  position: sticky;
+  top: 100px; /* Adjust this value to match the height of your navbar */
+  z-index: 1; /* Ensure the product page stays below the navbar */
+}
+
+
+.sticky-menu-container {
+  position: sticky;
+  top: 80px;
+  z-index: 100;
 }

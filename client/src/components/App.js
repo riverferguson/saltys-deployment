@@ -19,7 +19,7 @@ function App() {
   const onSign = (user) => setUser(user);
 
   useEffect(() => {
-    fetch("/products")
+    fetch("/api/v1/products")
     .then(res => res.json())
     .then(data => {
       setProducts(data)

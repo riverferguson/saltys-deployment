@@ -10,7 +10,19 @@ const Footer = () => {
     <>
       <div
         className="icon-bar"
-        style={{ backgroundColor: "gray", color: "white", padding: "25px" }}
+        style={{
+          backgroundColor: "transparent",
+          color: "white",
+          padding: "5px",
+          position: "fixed",
+          bottom: 0,
+          left: 0,
+          width: "100%",
+          display: "flex",
+          justifyContent: "left",
+          alignItems: "left",
+          zIndex: 9999,
+        }}
       >
         <a href="https://twitter.com" target="_blank" rel="noreferrer">
           <TwitterIcon
@@ -38,7 +50,7 @@ const Footer = () => {
         </a>
         <p>Salty's Surfshop &#8482;</p>
         <a href="#root">
-          <Button variant="contained" size="medium" style={{marginLeft: '10px'}}>
+          <Button variant="contained" size="medium" style={{ marginLeft: "10px" }}>
             Back To Top
           </Button>
         </a>
