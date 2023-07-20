@@ -22,6 +22,7 @@ from models import User, Product, Review, Cartitem
 
 @app.route('/')
 @app.route('/cartitems')
+@app.route('/cartitems/<int:id>')
 @app.route('/signin')
 @app.route('/signup')
 @app.route('/about')
@@ -181,7 +182,7 @@ class Cartitems(Resource):
         except Exception as e:
             return make_response(jsonify({"errors": [str(e)]}), 400)
         
-api.add_resource(Cartitems, '/cartitems')
+api.add_resource(Cartitems, '/api/v1/cartitems')
 
 
 class CartitemByID(Resource):
@@ -208,7 +209,7 @@ class CartitemByID(Resource):
             return make_response(jsonify({"errors": "Item not found"}), 404)
         
 
-api.add_resource(CartitemByID, '/cartitems/<int:id>')
+api.add_resource(CartitemByID, '/api/v1/cartitems/<int:id>')
 
 class Reviews(Resource):
 

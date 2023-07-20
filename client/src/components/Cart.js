@@ -8,7 +8,7 @@ const Cart = () => {
   const [orderItems, setOrderItems] = useState([]);
 
   useEffect(() => {
-    fetch('/cartitems')
+    fetch('/api/v1/cartitems')
       .then(response => response.json())
       .then(data => {
         setOrderItems(data);
@@ -19,7 +19,7 @@ const Cart = () => {
 
   const handleAdd = (product) => {
     if (product.quantity >= 0) {
-      fetch(`/cartitems/${product.id}`, {
+      fetch(`/api/v1/cartitems/${product.id}`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',
@@ -36,7 +36,7 @@ const Cart = () => {
   const handleMinus = (product) => {
     console.log(product.quantity >= 0)
     if (product.quantity >= 1) {
-      fetch(`/cartitems/${product.id}`, {
+      fetch(`/api/v1/cartitems/${product.id}`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',
@@ -53,7 +53,7 @@ const Cart = () => {
   };
 
   const handleDelete = (deleteItem) => {
-    fetch(`/cartitems/${deleteItem.id}`, {
+    fetch(`/api/v1/cartitems/${deleteItem.id}`, {
       method: 'DELETE'
     })
     .then(res => {

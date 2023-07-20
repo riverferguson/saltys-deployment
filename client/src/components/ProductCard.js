@@ -23,7 +23,7 @@ const Review = ({reviewBody}) => {
 
 const addToCart = (e) => {
   e.target.innerText = "Item added";
-    fetch('/cartitems', {
+    fetch('/api/v1/cartitems', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
