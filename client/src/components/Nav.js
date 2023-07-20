@@ -29,7 +29,8 @@ const {setError} = useErrors()
     <>
     <nav className="nav">
       <Link to="/" className="site-title">
-        <span className="shop-name">&nbsp; Salty's Surfshop</span>
+      <img className='logo' src={process.env.PUBLIC_URL + "/surflogo.png"} alt='oops'/> 
+        <span className="shop-name">&nbsp; Unlock Your Surfing Potential</span>
       </Link>
       <ul>
 

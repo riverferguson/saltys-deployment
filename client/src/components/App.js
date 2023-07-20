@@ -82,7 +82,7 @@ function App() {
           <About />
         </Route>
         <Route exact path='/'>
-          <Home />
+          <Home products={products}/>
         </Route>
       </Switch>
       <Footer />
