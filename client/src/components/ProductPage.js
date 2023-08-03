@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import ProductCard from './ProductCard'
-import { Grid, Menu } from 'semantic-ui-react'
+import { Flag, Grid, Menu } from 'semantic-ui-react'
 
 
 
@@ -66,3 +66,6 @@ useEffect(() => {
 
 
 export default ProductPage
+
+
+

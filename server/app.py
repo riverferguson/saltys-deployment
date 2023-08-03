@@ -230,5 +230,18 @@ class Reviews(Resource):
         
 api.add_resource(Reviews, '/reviews')
 
+class ReviewById(Resource):
+
+    def delete(self, id):
+        try:
+            review = db.session.get(Review, id)
+            db.session.delete(review)
+            db.session.commit()
+            return make_response(jsonify({}), 204)
+        except Exception:
+            return make_response(jsonify({"errors": "Review not found"}), 404)
+        
+api.add_resource(ReviewById, '/reviews/<int:id>')
+
 if __name__ == '__main__':
     app.run(port=5555, debug=True)
